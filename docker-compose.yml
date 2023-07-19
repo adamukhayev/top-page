@@ -8,7 +8,7 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=admin
     ports:
-      - "27000:27000"
+      - "27017:27017"
     volumes:
       - ./mongo-data:/opt/app
     command: --wiredTigerCacheSizeGB=1.5
@@ -17,6 +17,6 @@ services:
     container_name: top-api
     restart: always
     ports:
-      - "3001:3001"
+      - "3000:3000"
     volumes:
       - ./.env:/opt/app/.env
