@@ -13,7 +13,7 @@ services:
       - ./mongo-data:/opt/app
     command: --wiredTigerCacheSizeGB=1.5
   top.api:
-    image: docker.pkg.github.com/adamukhayev/top-page/top-page:develop
+    image: ghcr.io/adamukhayev/top-page/top-page:develop
     container_name: top-api
     restart: always
     ports:
