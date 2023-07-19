@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      - name: Copy package.json
+        run: cp package.json $GITHUB_WORKSPACE
       - name: Publish to registry
         uses: elgohr/Publish-Docker-Github-Action@v4
         with:
