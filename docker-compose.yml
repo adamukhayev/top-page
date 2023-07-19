@@ -1,17 +1,5 @@
 version: '3'
 services:
-  mongo:
-    image: mongo
-    container_name: mongo
-    restart: always
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=admin
-      - MONGO_INITDB_ROOT_PASSWORD=admin
-    ports:
-      - "27017:27017"
-    volumes:
-      - ./mongo-data:/opt/app
-    command: --wiredTigerCacheSizeGB=1.5
   top.api:
     image: ghcr.io/adamukhayev/top-page/top-page:develop
     container_name: top-api
