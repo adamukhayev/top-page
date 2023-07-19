@@ -8,12 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Copy package.json to build context
-        run: cp package.json $GITHUB_WORKSPACE
-      - name: Install dependencies
-        run: npm install --legacy-peer-deps
+      - uses: actions/checkout@master
       - name: Publish to registry
         uses: elgohr/Publish-Docker-Github-Action@v4
         with:
